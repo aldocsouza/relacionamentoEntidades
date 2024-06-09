@@ -19,7 +19,5 @@ public class Comentario {
     private Long codigo;
     private String auto;
     private String texto;
-    
-    private Postagem postagem;
 
 }

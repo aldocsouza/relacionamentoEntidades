@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "postagens")
 @Getter
@@ -19,5 +21,9 @@ public class Postagem {
     private Long codigo;
     private String titulo;
     private String texto;
+
+    @OneToMany
+    @JoinColumn(name = "codigo_postagem")
+    List<Comentario> comentarios;
 
 }
